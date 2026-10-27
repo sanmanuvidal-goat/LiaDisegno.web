@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libretas - Lia Disegno</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="main-header">
+    <div class="header-container">
+        
+        <!-- A. Logo de la marca -->
+        <a href="index.html" class="logo-link">
+            <span class="logo-text">Lia</span>
+            <span class="logo-subtext">DISEGNO</span>
+        </a>
+
+        <!-- B. Navegación y Lista Desplegable -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <button id="btn-productos" class="nav-button">Productos ▾</button>
+                    
+                    <div id="dropdown-productos" class="dropdown-main">
+                        <div class="submenu-group">
+                            <button class="submenu-btn menu-item-estilo">Fotos ▸</button>
+                            <div class="submenu-list">
+                                <a href="paginas/fotos-polaroid.html">Polaroid</a>
+                            </div>
+                        </div>
+                        <div class="submenu-group">
+                            <button class="submenu-btn menu-item-estilo">Stickers ▸</button>
+                            <div class="submenu-list">
+                                <a href="paginas/stickers-comunes.html">Comunes</a>
+                                <a href="paginas/stickers-waterpoof.html">Waterproof</a>
+                            </div>
+                        </div>
+                        <a href="accesorios.html" class="menu-item-estilo">Accesorios</a>
+                        <a href="promos.html" class="menu-item-estilo">PROMOS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- C. Botón de Carrito Dinámico -->
+        <div class="header-actions">
+            <button id="cart-btn" class="header-cart-btn" aria-label="Ver carrito">
+                <i class="cart-icon">🛒</i>
+                <span id="cart-badge" class="cart-badge">0</span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ========================================== -->
+<!-- 2. PANEL LATERAL DEL CARRITO (OCULTO)      -->
+<!-- ========================================== -->
+<!-- Fondo oscuro que aparece detrás del menú -->
+<div id="cart-overlay" class="cart-overlay"></div>
+
+<!-- El panel que se desliza desde la derecha -->
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h2>Tu Carrito</h2>
+        <button id="close-cart" class="close-cart-btn" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    
+    <!-- Aquí el JavaScript inyectará los productos -->
+    <div id="cart-items-container" class="cart-items">
+        <!-- Contenido dinámico -->
+    </div>
+    
+    <div class="cart-footer">
+        <h3>Total: <span id="cart-total-price">$0</span></h3>
+        <button id="checkout-btn" class="checkout-btn">Pedir por WhatsApp</button>
+    </div>
+</div>
+    <main class="main-content">
+        <section class="info-banner">
+            <h2>Accesorios</h2>
+            <p>Detalles únicos y artesanales ideales para regalar o regalarte. Hechos 100% a mano con amor. <b>Tu compañera ideal para notas rápidas y dibujos.</b></p>
+        </section>
+
+        <section class="product-gallery">
+            
+            <!-- 1. Libreta A6 -->
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/libretas-a6.jpg" alt="Libreta A6">
+                    <span class="product-tag">15 x 10,5 cm</span>
+                </div>
+                <h3 class="product-title">Libreta A6</h3>
+                <p class="product-description">Tamaño clásico de bolsillo. Ideal para llevar a todos lados y no perder ninguna idea.</p>
+                <div class="product-action">
+                    <div class="price-wrapper">
+                        <p class="product-price">$4.500</p> 
+                        <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                    </div>
+                    <button class="btn-add-cart" data-name="Libreta A6" data-price="4500">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+            <!-- 2. Libreta Mini -->
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/libretas-mini.jpg" alt="Libreta Mini">
+                    <span class="product-tag">13 x 10,5 cm</span>
+                </div>
+                <h3 class="product-title">Libreta Mini</h3>
+                <p class="product-description">Compacta y funcional. Perfecta para notas breves o como libreta de direcciones.</p>
+                <div class="product-action">
+                    <div class="price-wrapper">
+                        <p class="product-price">$4.000</p> 
+                        <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                    </div>
+                    <button class="btn-add-cart" data-name="Libreta Mini" data-price="4000">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card">
+            <div class="product-image-container">
+                <img src="../assets/sen-normales.jpeg" alt="Señalador Simple">
+                <span class="product-tag">Lector Pro</span>
+            </div>
+            <h3 class="product-title">Señalador Simple</h3>
+            <p class="product-description">El diseño perfecto para acompañar tus lecturas favoritas y no perder nunca tu página.</p>
+            <div class="product-action">
+                <div class="price-wrapper">
+                    <p class="product-price">$1.500</p> 
+                    <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                </div>
+                <button class="btn-add-cart" data-name="Señalador Simple" data-price="1500">
+                    Agregar
+                </button>
+            </div>
+        </article>
+
+        <!-- 4. Señalador Imantado -->
+        <article class="product-card">
+            <div class="product-image-container">
+                <img src="../assets/sen-iman.jpg" alt="Señalador Imantado">
+                <span class="product-tag">Anticaídas</span>
+            </div>
+            <h3 class="product-title">Señalador Imantado</h3>
+            <p class="product-description">Práctico y seguro. Se sujeta magnéticamente a la hoja para que no se caiga ni se mueva jamás.</p>
+            <div class="product-action">
+                <div class="price-wrapper">
+                    <p class="product-price">$1.800</p> 
+                    <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                </div>
+                <button class="btn-add-cart" data-name="Señalador Imantado" data-price="1800">
+                    Agregar
+                </button>
+            </div> 
+        </article>
+
+        <!-- 5. Pulsera Hilo Rojo -->
+        <article class="product-card">
+            <div class="product-image-container">
+                <img src="../assets/hilo-rojo.jpg" alt="Pulsera de Hilo Rojo">
+                <span class="product-tag">Protección</span>
+            </div>
+            <h3 class="product-title">Pulsera Hilo Rojo</h3>
+            <p class="product-description">Tejida artesanalmente con nudos corredizos. Totalmente regulable y adaptable a cualquier muñeca.</p>
+            <div class="product-action">
+                <div class="price-wrapper">
+                    <p class="product-price">$3.500</p> 
+                    <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                </div>
+                <button class="btn-add-cart" data-name="Pulsera Hilo Rojo" data-price="3000">
+                    Agregar
+                </button>
+            </div> 
+        </article>
+
+        <!-- 6. Pulsera Hilo Rojo + Ojo Turco -->
+        <article class="product-card">
+            <div class="product-image-container">
+                <img src="../assets/ojoturco.jpg" alt="Pulsera Hilo Rojo con Ojo Turco">
+                <span class="product-tag">Amuleto</span>
+            </div>
+            <h3 class="product-title">Pulsera Hilo Rojo + Ojo Turco</h3>
+            <p class="product-description">Combinación clásica regulable para la buena energía. Un accesorio delicado de uso diario.</p>
+            <div class="product-action">
+                <div class="price-wrapper">
+                    <p class="product-price">$3.000</p> 
+                    <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                </div>
+                <button class="btn-add-cart" data-name="Pulsera Hilo Rojo + Ojo Turco" data-price="2500">
+                    Agregar
+                </button>
+            </div>
+        </article>
+
+        <!-- 7. Cupones Vale Por -->
+        <article class="product-card">
+            <div class="product-image-container">
+                <img src="../assets/valepor-unid.jpg" alt="Cupones personalizados Vale Por">
+                <span class="product-tag">Pack x10</span>
+            </div>
+            <h3 class="product-title">Cupones "Vale Por"</h3>
+            <p class="product-description">Contiene 10 vales totalmente personalizados. El regalo ideal, creativo y romántico para sorprender.</p>
+            <div class="product-action">
+                <div class="price-wrapper">
+                    <p class="product-price">$3.500</p> 
+                    <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                </div>
+                <button class="btn-add-cart" data-name="Cupones Vale Por" data-price="3500">
+                    Agregar
+                </button>
+            </div> 
+        </article>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="footer-column brand-info">
+            <h4 class="footer-title">Lia Disegno</h4>
+            <p class="footer-text">Diseños únicos, stickers personalizados y recuerdos hechos con amor.</p>
+            <p class="footer-location">📍 Hecho en Bahía Blanca</p>
+        </div>
+
+        <div class="footer-column social-media">
+            <h4 class="footer-title">¡Seguinos y Charlemos!</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/lia.disegno/" target="_blank" rel="noopener noreferrer" class="social-link" title="Seguinos en Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Lia Disegno" class="icon-img">
+                </a>
+                
+                <a href="https://wa.me/5492215614689?text=¡Hola!%20Vi%20tu%20página%20web%20y%20quería%20hacerte%20una%20consulta." target="_blank" rel="noopener noreferrer" class="social-link" title="Escribinos por WhatsApp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Lia Disegno" class="icon-img">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column help-links">
+            <h4 class="footer-title">Ayuda</h4>
+            <ul>
+                <li><a href="#promos-section">🔥 Ver Promos</a></li>
+                <li>
+    <a href="https://wa.me/5492215614689?text=¡Hola!%20Quería%20saber%20cómo%20tengo%20que%20hacer%20para%20enviarte%20mis%20fotos%20para%20imprimir." target="_blank" rel="noopener noreferrer">
+        ❓ ¿Cómo encargar un pedido?
+    </a></li>
+                <li>
+    <a href="https://wa.me/5492215614689?text=¡Hola!%20Quería%20consultarte%20por%20los%20costos%20de%20envío%20o%20por%20dónde%20se%20puede%20retirar%20en%20Bahía." target="_blank" rel="noopener noreferrer">
+        📦 Tiempos de envío y retiros
+    </a>
+</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Lia Disegno. Todos los derechos reservados.</p>
+        <a href="#" class="scroll-top-link">Volver arriba ↑</a>
+    </div>
+</footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

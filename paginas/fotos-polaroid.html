@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos Polaroid - Lia Disegno</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="main-header">
+    <div class="header-container">
+        
+        <!-- A. Logo de la marca -->
+        <a href="../index.html" class="logo-link">
+            <span class="logo-text">Lia</span>
+            <span class="logo-subtext">DISEGNO</span>
+        </a>
+
+        <!-- B. Navegación y Lista Desplegable -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <button id="btn-productos" class="nav-button">Productos ▾</button>
+                    
+                    <div id="dropdown-productos" class="dropdown-main">
+                        <div class="submenu-group">
+                            <button class="submenu-btn menu-item-estilo">Fotos ▸</button>
+                            <div class="submenu-list">
+                                <a href="fotos-polaroid.html">Polaroid</a>
+                            </div>
+                        </div>
+                        <div class="submenu-group">
+                            <button class="submenu-btn menu-item-estilo">Stickers ▸</button>
+                            <div class="submenu-list">
+                                <a href="stickers-comunes.html">Comunes</a>
+                                <a href="stickers-waterpoof.html">Waterproof</a>
+                            </div>
+                        </div>
+                        <a href="../accesorios.html" class="menu-item-estilo">Accesorios</a>
+                        <a href="../promos.html" class="menu-item-estilo">PROMOS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- C. Botón de Carrito Dinámico -->
+        <div class="header-actions">
+            <button id="cart-btn" class="header-cart-btn" aria-label="Ver carrito">
+                <i class="cart-icon">🛒</i>
+                <span id="cart-badge" class="cart-badge">0</span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ========================================== -->
+<!-- 2. PANEL LATERAL DEL CARRITO (OCULTO)      -->
+<!-- ========================================== -->
+<!-- Fondo oscuro que aparece detrás del menú -->
+<div id="cart-overlay" class="cart-overlay"></div>
+
+<!-- El panel que se desliza desde la derecha -->
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h2>Tu Carrito</h2>
+        <button id="close-cart" class="close-cart-btn" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    
+    <!-- Aquí el JavaScript inyectará los productos -->
+    <div id="cart-items-container" class="cart-items">
+        <!-- Contenido dinámico -->
+    </div>
+    
+    <div class="cart-footer">
+        <h3>Total: <span id="cart-total-price">$0</span></h3>
+        <button id="checkout-btn" class="checkout-btn">Pedir por WhatsApp</button>
+    </div>
+</div>
+
+    <main class="main-content">
+        <section class="info-banner">
+            <h2>Fotos Polaroid</h2>
+            <p>Elegí el tamaño que mejor se adapte a tus recuerdos.</p>
+        </section>
+
+        <section class="product-gallery">
+            
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/mini-cuadrada.jpg" alt="Polaroid Mini Cuadrada">
+                    <span class="product-tag">7 x 6 cm</span>
+                </div>
+                <h3 class="product-title">Mini Cuadrada</h3>
+                <p class="product-description">Ideal para decorar tu funda del celular o colgar en guirnaldas.</p>
+                <div class="product-action">
+                    <div class="price-wrapper">
+                        <p class="product-price">$1.000</p> 
+                        <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                    </div>
+                    <button class="btn-add-cart" data-name="Mini Cuadrada" data-price="1000">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/mini-rectangular.jpg" alt="Polaroid Mini Rectangular">
+                    <span class="product-tag">8,5 x 5,4 cm</span>
+                </div>
+                <h3 class="product-title">Mini Rectangular</h3>
+                <p class="product-description">Tamaño clásico estilo Instax, perfecta para billeteras.</p>
+                <div class="product-action">
+                    <div class="price-wrapper">
+                        <p class="product-price">$1.000</p> 
+                        <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                    </div>
+                    <button class="btn-add-cart" data-name="Mini Rectangular" data-price="1000">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/polaroid-mediana.jpg" alt="Polaroid Mediana">
+                    <span class="product-tag">8,5 x 7,5 cm</span>
+                </div>
+                <h3 class="product-title">Polaroid Mediana</h3>
+                <p class="product-description">Un tamaño versátil para armar cuadros o regalar.</p>
+                <div class="product-action">
+                    <div class="price-wrapper">
+                        <p class="product-price">$1.300</p> 
+                        <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                    </div>
+                    <button class="btn-add-cart" data-name="Polaroid Mediana" data-price="1300">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/polaroid-grande.jpg" alt="Polaroid Grande">
+                    <span class="product-tag">10,5 x 8,5 cm</span>
+                </div>
+                <h3 class="product-title">Polaroid Grande</h3>
+                <p class="product-description">Máxima definición para tus fotos favoritas de viajes o eventos.</p>
+                <div class="product-action">
+                    <div class="price-wrapper">
+                        <p class="product-price">$1.500</p> 
+                        <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                    </div>
+                    <button class="btn-add-cart" data-name="Polaroid Grande" data-price="1500">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="../assets/pol-iman.jpg" alt="Polaroid Imantada">
+                    <span class="product-tag">8,5 x 5,4 cm</span>
+                </div>
+                <h3 class="product-title">Polaroid Imantada</h3>
+                <p class="product-description">Perfecta para llenar de recuerdos la heladera. Base magnética resistente de alta calidad.</p>
+                <div class="product-action">
+                    <div class="price-wrapper">
+                        <p class="product-price">$1.200</p> 
+                        <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+                    </div>
+                    <button class="btn-add-cart" data-name="Polaroid Imantada" data-price="1200">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-info">
+                <h4 class="footer-title">Lia Disegno</h4>
+                <p class="footer-text">Diseños únicos, stickers personalizados y recuerdos hechos con amor.</p>
+                <p class="footer-location">📍 Hecho en Bahía Blanca</p>
+            </div>
+            <div class="footer-column social-media">
+                <h4 class="footer-title">¡Seguinos y Charlemos!</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/lia.disegno/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="icon-img">
+                    </a>
+                    <a href="https://wa.me/5492215614689?text=¡Hola!%20Quería%20hacerte%20una%20consulta%20por%20fotos." target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="icon-img">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column help-links">
+                <h4 class="footer-title">Ayuda</h4>
+                <ul>
+                    <li><a href="promos.html">🔥 Ver Promos</a></li>
+                    <li><a href="https://wa.me/5492215614689?text=¡Hola!%20Quería%20saber%20cómo%20tengo%20que%20hacer%20para%20enviarte%20mis%20fotos%20para%20imprimir." target="_blank" rel="noopener noreferrer">❓ ¿Cómo encargar?</a></li>
+                    <li><a href="https://wa.me/5492215614689?text=¡Hola!%20Quería%20consultarte%20por%20los%20tiempos%20de%20entrega%20en%20Bahía." target="_blank" rel="noopener noreferrer">📦 Envíos y Retiros</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lia Disegno. Todos los derechos reservados.</p>
+            <a href="#" class="scroll-top-link">Volver arriba ↑</a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

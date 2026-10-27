@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickers Comunes - Lia Disegno</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="main-header">
+    <div class="header-container">
+        
+        <!-- A. Logo de la marca -->
+        <a href="../index.html" class="logo-link">
+            <span class="logo-text">Lia</span>
+            <span class="logo-subtext">DISEGNO</span>
+        </a>
+
+        <!-- B. Navegación y Lista Desplegable -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <button id="btn-productos" class="nav-button">Productos ▾</button>
+                    
+                    <div id="dropdown-productos" class="dropdown-main">
+                        <div class="submenu-group">
+                            <button class="submenu-btn menu-item-estilo">Fotos ▸</button>
+                            <div class="submenu-list">
+                                <a href="fotos-polaroid.html">Polaroid</a>
+                            </div>
+                        </div>
+                        <div class="submenu-group">
+                            <button class="submenu-btn menu-item-estilo">Stickers ▸</button>
+                            <div class="submenu-list">
+                                <a href="stickers-comunes.html">Comunes</a>
+                                <a href="stickers-waterpoof.html">Waterproof</a>
+                            </div>
+                        </div>
+                        <a href="../accesorios.html" class="menu-item-estilo">Accesorios</a>
+                        <a href="../promos.html" class="menu-item-estilo">PROMOS</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- C. Botón de Carrito Dinámico -->
+        <div class="header-actions">
+            <button id="cart-btn" class="header-cart-btn" aria-label="Ver carrito">
+                <i class="cart-icon">🛒</i>
+                <span id="cart-badge" class="cart-badge">0</span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ========================================== -->
+<!-- 2. PANEL LATERAL DEL CARRITO (OCULTO)      -->
+<!-- ========================================== -->
+<!-- Fondo oscuro que aparece detrás del menú -->
+<div id="cart-overlay" class="cart-overlay"></div>
+
+<!-- El panel que se desliza desde la derecha -->
+<div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+        <h2>Tu Carrito</h2>
+        <button id="close-cart" class="close-cart-btn" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    
+    <!-- Aquí el JavaScript inyectará los productos -->
+    <div id="cart-items-container" class="cart-items">
+        <!-- Contenido dinámico -->
+    </div>
+    
+    <div class="cart-footer">
+        <h3>Total: <span id="cart-total-price">$0</span></h3>
+        <button id="checkout-btn" class="checkout-btn">Pedir por WhatsApp</button>
+    </div>
+</div>
+
+    <main class="main-content">
+        <section class="info-banner">
+            <h2>Stickers Comunes</h2>
+            <p>Este producto es <b>totalmente personalizado</b> (las imagenes son de referencia).</p> <p> Cada cliente debera enviar las imágenes del sticker que desee. </p>
+        </section>
+
+        <section class="product-gallery">
+            
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/comun-mini.jpg" alt="Sticker 4x4">
+                    <span class="product-tag">4 x 4 cm</span>
+                </div>
+                <h3 class="product-title">Sticker Pequeño</h3>
+                <p class="product-description">Acabado Mate/Brilloso. Perfecto para detalles sutiles.</p>
+                <div class="product-action">
+        <div class="price-wrapper">
+            <p class="product-price">$200</p> 
+            <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+        </div>
+        
+        <!-- NUEVO: Botón conectado al carrito -->
+        <!-- IMPORTANTE: El data-price ponelo solo con números (sin el signo $) -->
+        <button class="btn-add-cart" data-name="Sticker Pequeño" data-price="200">
+            Agregar
+        </button>
+    </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/comun-estandar.jpg" alt="Sticker 5x5">
+                    <span class="product-tag">5 x 5 cm</span>
+                </div>
+                <h3 class="product-title">Sticker Estándar</h3>
+                <p class="product-description">Acabado Mate/Brilloso. El tamaño más elegido para agendas.</p>
+                <div class="product-action">
+        <div class="price-wrapper">
+            <p class="product-price">$250</p> 
+            <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+        </div>
+        
+        <!-- NUEVO: Botón conectado al carrito -->
+        <!-- IMPORTANTE: El data-price ponelo solo con números (sin el signo $) -->
+        <button class="btn-add-cart" data-name="Sticker Estándar" data-price="250">
+            Agregar
+        </button>
+    </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/comun-mediano.jpg" alt="Sticker 6x6">
+                    <span class="product-tag">6 x 6 cm</span>
+                </div>
+                <h3 class="product-title">Sticker Mediano</h3>
+                <p class="product-description">Acabado Mate/Brilloso. Ideal para tapas de libretas.</p>
+                <div class="product-action">
+        <div class="price-wrapper">
+            <p class="product-price">$300</p> 
+            <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+        </div>
+        
+        <!-- NUEVO: Botón conectado al carrito -->
+        <!-- IMPORTANTE: El data-price ponelo solo con números (sin el signo $) -->
+        <button class="btn-add-cart" data-name="Sticker Mediano" data-price="300">
+            Agregar
+        </button>
+    </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="/assets/comun-grande.jpg" alt="Sticker 7x7">
+                    <span class="product-tag">7 x 7 cm</span>
+                </div>
+                <h3 class="product-title">Sticker Grande</h3>
+                <p class="product-description">Acabado Mate/Brilloso. Para resaltar al máximo tus diseños.</p>
+                <div class="product-action">
+        <div class="price-wrapper">
+            <p class="product-price">$350</p> 
+            <span style="font-size: 0.8rem; font-weight: normal; color: #777;">c/u</span>
+        </div>
+        
+        <!-- NUEVO: Botón conectado al carrito -->
+        <!-- IMPORTANTE: El data-price ponelo solo con números (sin el signo $) -->
+        <button class="btn-add-cart" data-name="Sticker Grande" data-price="350">
+            Agregar
+        </button>
+    </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="footer-column brand-info">
+            <h4 class="footer-title">Lia Disegno</h4>
+            <p class="footer-text">Diseños únicos, stickers personalizados y recuerdos hechos con amor.</p>
+            <p class="footer-location">📍 Hecho en Bahía Blanca</p>
+        </div>
+
+        <div class="footer-column social-media">
+            <h4 class="footer-title">¡Seguinos y Charlemos!</h4>
+            <div class="social-icons">
+                <a href="hhttps://www.instagram.com/lia.disegno/" target="_blank" rel="noopener noreferrer" class="social-link" title="Seguinos en Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Lia Disegno" class="icon-img">
+                </a>
+                
+                <a href="https://wa.me/5492215614689?text=¡Hola!%20Vi%20tu%20página%20web%20y%20quería%20hacerte%20una%20consulta." target="_blank" rel="noopener noreferrer" class="social-link" title="Escribinos por WhatsApp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Lia Disegno" class="icon-img">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column help-links">
+            <h4 class="footer-title">Ayuda</h4>
+            <ul>
+                <li><a href="#promos-section">🔥 Ver Promos</a></li>
+                <li>
+    <a href="https://wa.me/5492215614689?text=¡Hola!%20Quería%20saber%20cómo%20tengo%20que%20hacer%20para%20enviarte%20mis%20fotos%20para%20imprimir." target="_blank" rel="noopener noreferrer">
+        ❓ ¿Cómo encargar un pedido?
+    </a></li>
+                <li>
+    <a href="https://wa.me/5492215614689?text=¡Hola!%20Quería%20consultarte%20por%20los%20costos%20de%20envío%20o%20por%20dónde%20se%20puede%20retirar%20en%20Bahía." target="_blank" rel="noopener noreferrer">
+        📦 Tiempos de envío y retiros
+    </a>
+</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Lia Disegno. Todos los derechos reservados.</p>
+        <a href="#" class="scroll-top-link">Volver arriba ↑</a>
+    </div>
+</footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
